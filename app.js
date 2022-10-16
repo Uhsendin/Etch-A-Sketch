@@ -2,11 +2,12 @@ const grid = document.getElementById("grid-container");
 
 
 // Creates a 16x16 grid on load
-function gridOnLoad() {
-  for (let i = 1; i < 273; i++) {
+makeGrid = () => {
+  for (let i = 0; i < 256; i++) {
     const div = document.createElement("div");
+    div.classList.add("square");
     grid.appendChild(div);
   }
-}
+};
 
-gridOnLoad()
+makeGrid()
