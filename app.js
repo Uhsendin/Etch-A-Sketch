@@ -1,4 +1,5 @@
 const grid = document.getElementById("grid-container");
+const gridSquares = document.querySelector("div");
 
 
 // Creates a 16x16 grid on load
@@ -10,4 +11,10 @@ makeGrid = () => {
   }
 };
 
-makeGrid()
+// Removes class and adds black color CSS class
+gridSquares.addEventListener("mouseover", function(event) {
+  event.target.classList.replace("square", "black-square")
+});
+
+
+makeGrid();
