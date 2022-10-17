@@ -1,5 +1,9 @@
 const grid = document.getElementById("grid-container");
 const gridSquares = document.querySelector("div");
+const rainbowBtn = document.getElementsByClassName("rgb")
+const clearBtn = document.getElementsByClassName("clear")
+const eraserBtn = document.getElementsByClassName("erase")
+const shadow = document.getElementsByClassName("shadow")
 
 
 // Creates a 16x16 grid on load
