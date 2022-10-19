@@ -2,10 +2,24 @@ h1 {
   text-align: center;
 }
 
+.item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+}
+
 .grid-board {
+  margin-top: 15px;
   width: 500px;
   height: 500px;
   display: grid;
   border: 6px solid black;
   border-radius: 7px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
