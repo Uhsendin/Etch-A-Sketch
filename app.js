@@ -1,30 +1,18 @@
-const grid = document.getElementById("grid-container");
-const gridSquares = document.querySelector("div");
-const rainbowBtn = document.getElementsByClassName("rgb");
-const clearBtn = document.getElementsByClassName("clear");
-const eraserBtn = document.getElementsByClassName("erase");
-const shadow = document.getElementsByClassName("shadow");
+function makeGrid(size) {
+  let grid = document.querySelector(".grid-board");
+  let div = grid.querySelectorAll("div")
+  div.forEach((div) => div.remove());
+  grid.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size} , 1fr)`;
 
-// Creates a 16x16 grid on load
-makeGrid = () => {
   for (let i = 0; i < 256; i++) {
-    const div = document.createElement("div");
-    div.classList.add("square");
-    grid.appendChild(div);
+    let div = document.createElement("div");
+    div.style.backgroundColor = "white";
+    grid.insertAdjacentElement("beforeend", div);
   }
-};
+}
+makeGrid(16)
 
-makeGrid();
-
-// Creates a random RGB color for user
-colorGen = () => {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  gridSquares.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-};
-
-// Removes class and adds black color CSS class
-gridSquares.addEventListener("mouseover", function (event) {
-  event.target.classList.replace("square", "black-square");
-});
+function gridSize(input) {
+  makeGrid(input)
+}

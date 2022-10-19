@@ -2,30 +2,10 @@ h1 {
   text-align: center;
 }
 
-.square {
-  background-color: white;
-  border: 1px solid black;
+.grid-board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  border: 6px solid black;
+  border-radius: 7px;
 }
-
-
-
-#grid-container {
-  margin-top: 25px;
-  
-  display: inline-grid;
-  grid-template-columns: repeat(16, 2fr);
-  grid-template-rows: repeat(16, 2fr);
-  border: 5px solid black;
-  border-radius: 4px;
-  height: 575px;
-  width: 575px;
-}
-
-.grid-center {
- text-align: center;
-}
-
-.black-square {
-  background-color: black;
-}
-
