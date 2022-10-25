@@ -1,7 +1,6 @@
 const grid = document.querySelector(".grid-board");
 const gridDivs = grid.querySelectorAll("div");
 
-
 // Creates a 16x16 grid layout
 function makeGrid(size) {
   gridDivs.forEach((div) => div.remove());
@@ -29,17 +28,33 @@ function blackColor() {
   const gridSquare = document.querySelectorAll(".square");
   gridSquare.forEach((gridSquare) => {
     gridSquare.addEventListener("mouseover", () => {
-      gridSquare.style.backgroundColor = "black"
-    })
+      gridSquare.style.backgroundColor = "black";
+    });
   });
 }
+
+// Creates a random RGB color
+function randomRGB() {
+  var roundValue = Math.round,
+    rndmValue = Math.random,
+    maxNum = 255;
+  return (
+    "rgba(" +
+    roundValue(rndmValue() * maxNum) +
+    "," +
+    roundValue(rndmValue() * maxNum) +
+    "," +
+    roundValue(rndmValue() * maxNum) +
+    ")"
+  );
+}
+
 
 
 // Changes grid to black
 function changeColor() {
   this.style.backgroundColor = "black";
 }
-
 
 // Clears grid from any color changes
 function clearGrid() {
@@ -54,7 +69,7 @@ function eraserGrid() {
   const gridSquare = document.querySelectorAll(".square");
   gridSquare.forEach((gridSquare) => {
     gridSquare.addEventListener("mouseover", () => {
-      gridSquare.style.backgroundColor = "white"
-    })
+      gridSquare.style.backgroundColor = "white";
+    });
   });
 }
