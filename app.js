@@ -34,12 +34,12 @@ function blackColor() {
 }
 
 // Creates a random RGB color
-function randomRGB() {
+function rgbGenerator() {
   var roundValue = Math.round,
     rndmValue = Math.random,
     maxNum = 255;
   return (
-    "rgba(" +
+    "rgb(" +
     roundValue(rndmValue() * maxNum) +
     "," +
     roundValue(rndmValue() * maxNum) +
@@ -48,8 +48,17 @@ function randomRGB() {
     ")"
   );
 }
+console.log(rgbGenerator());
 
-
+function rgbBtn() {
+  const gridSquare = document.querySelectorAll(".square");
+  gridSquare.forEach((gridSquare) => {
+    gridSquare.addEventListener("mouseover", () => {
+      gridSquare.style.removeProperty("background-Color");
+      gridSquare.style.backgroundColor = rgbGenerator()
+    });
+  });
+}
 
 // Changes grid to black
 function changeColor() {
