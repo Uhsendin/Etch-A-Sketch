@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid-board");
 const gridDivs = grid.querySelectorAll("div");
 
+
 // Creates a 16x16 grid layout
 function makeGrid(size) {
   gridDivs.forEach((div) => div.remove());
@@ -22,6 +23,17 @@ makeGrid(16);
 function gridSize(input) {
   makeGrid(input);
 }
+
+// Black Btn changes div color to black
+function blackColor() {
+  const gridSquare = document.querySelectorAll(".square");
+  gridSquare.forEach((gridSquare) => {
+    gridSquare.addEventListener("mouseover", () => {
+      gridSquare.style.backgroundColor = "black"
+    })
+  });
+}
+
 
 // Changes grid to black
 function changeColor() {
