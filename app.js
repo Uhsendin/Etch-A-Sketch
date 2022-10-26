@@ -20,6 +20,7 @@ makeGrid(16);
 
 // Takes user input for desired grid size
 function gridSize(input) {
+  clearGrid()
   makeGrid(input);
 }
 
